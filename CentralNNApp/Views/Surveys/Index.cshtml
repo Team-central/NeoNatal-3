@@ -1,0 +1,141 @@
+﻿@model IEnumerable<CentralNNApp.Models.Survey>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Mother.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ward)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Race)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Premature)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OBGYN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StressLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Smoker)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FamilySmoke)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Alcohol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FamilyAlcohol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Drug)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FamilyDrugs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChronicIllness)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Diet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GovAssit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Income)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Education)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mother.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedAt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ward)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Race)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Premature)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OBGYN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StressLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Smoker)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FamilySmoke)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alcohol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FamilyAlcohol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Drug)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FamilyDrugs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChronicIllness)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Diet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GovAssit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Income)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Education)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

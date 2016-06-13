@@ -1,0 +1,170 @@
+﻿@model CentralNNApp.Models.Survey
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Survey</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Mother.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mother.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ward)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ward)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Race)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Race)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Premature)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Premature)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OBGYN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OBGYN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StressLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StressLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Smoker)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Smoker)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FamilySmoke)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FamilySmoke)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alcohol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alcohol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FamilyAlcohol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FamilyAlcohol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Drug)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Drug)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FamilyDrugs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FamilyDrugs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChronicIllness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChronicIllness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GovAssit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GovAssit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Income)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Income)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Education)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Education)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
