@@ -11,12 +11,18 @@ namespace JayMayNN3
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+            routes.MapRoute(
+                name: "Home",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Account", action = "Login", id = UrlParameter.Optional }
+            );
+
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
+                name: "Home2",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Account", action = "Login", id = UrlParameter.Optional }
             );
         }
     }
