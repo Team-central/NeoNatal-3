@@ -151,6 +151,8 @@
             @*@Html.LabelFor(model => model.Drug, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.Drug, "1")@Html.Label("Yes")<br />
+                @Html.RadioButtonFor(model => model.Drug, "2")@Html.Label("No")<br />
+                @Html.RadioButtonFor(model => model.Drug, "3")@Html.Label("Prefer not to answer")<br />
                 @Html.ValidationMessageFor(model => model.Drug, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -159,7 +161,9 @@
             <div class="control-label col-md-4"><b> Has anyone in your family used drugs other than tobacco and alcohol? </b></div>
             @*@Html.LabelFor(model => model.FamilyDrugs, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
-                @Html.EditorFor(model => model.FamilyDrugs, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.RadioButtonFor(model => model.FamilyDrugs, "1")@Html.Label("Yes")<br />
+                @Html.RadioButtonFor(model => model.FamilyDrugs, "2")@Html.Label("No")<br />
+                @Html.RadioButtonFor(model => model.FamilyDrugs, "3")@Html.Label("Prefer not to answer")<br />
                 @Html.ValidationMessageFor(model => model.FamilyDrugs, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -168,7 +172,9 @@
             <div class="control-label col-md-4"><b> Do you currently have a chronic illness? </b></div>
             @*@Html.LabelFor(model => model.ChronicIllness, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
-                @Html.EditorFor(model => model.ChronicIllness, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.RadioButtonFor(model => model.ChronicIllness, "1")@Html.Label("Yes")<br />
+                @Html.RadioButtonFor(model => model.ChronicIllness, "2")@Html.Label("No")<br />
+                @Html.RadioButtonFor(model => model.ChronicIllness, "3")@Html.Label("Prefer not to answer")<br />
                 @Html.ValidationMessageFor(model => model.ChronicIllness, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -177,7 +183,14 @@
             <div class="control-label col-md-4"><b> Which of these would you say you eat on a daily basis? </b></div>
             @*@Html.LabelFor(model => model.Diet, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
-                @Html.EditorFor(model => model.Diet, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.CheckBoxFor(model => model.DietBoolean, "1")@Html.Label("Red Meat")<br />
+                @Html.CheckBoxFor(model => model.DietBoolean, "2")@Html.Label("White Meat")<br />
+                @Html.CheckBoxFor(model => model.DietBoolean, "3")@Html.Label("Fish")<br />
+                @Html.CheckBoxFor(model => model.DietBoolean, "4")@Html.Label("Vegatables")<br />
+                @Html.CheckBoxFor(model => model.DietBoolean, "5")@Html.Label("Fruit")<br />
+                @Html.CheckBoxFor(model => model.DietBoolean, "6")@Html.Label("Bread/Rice/Pasta/Potatoes (other carbohydrates)")<br />
+                @Html.CheckBoxFor(model => model.DietBoolean, "7")@Html.Label("Milk and other diary products")<br />
+                @Html.CheckBoxFor(model => model.DietBoolean, "8")@Html.Label("Candy/Potato Chips/other junk food/high fat foods")<br />
                 @Html.ValidationMessageFor(model => model.Diet, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -185,7 +198,9 @@
         <div class="form-group">
             @*@Html.LabelFor(model => model.GovAssit, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
-                @Html.EditorFor(model => model.GovAssit, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.RadioButtonFor(model => model.ChronicIllness, "1")@Html.Label("Yes")<br />
+                @Html.RadioButtonFor(model => model.ChronicIllness, "2")@Html.Label("No")<br />
+                @Html.RadioButtonFor(model => model.ChronicIllness, "3")@Html.Label("Prefer not to answer")<br />
                 @Html.ValidationMessageFor(model => model.GovAssit, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -193,7 +208,12 @@
         <div class="form-group">
             @*@Html.LabelFor(model => model.Income, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
-                @Html.EditorFor(model => model.Income, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.RadioButtonFor(model => model.Income, "1")@Html.Label("Under $15,000")<br />
+                @Html.RadioButtonFor(model => model.Income, "2")@Html.Label("$15,000-$25,000")<br />
+                @Html.RadioButtonFor(model => model.Income, "3")@Html.Label("$25,000-$50,000")<br />
+                @Html.RadioButtonFor(model => model.Income, "4")@Html.Label("$50,000-$75,000")<br />
+                @Html.RadioButtonFor(model => model.Income, "5")@Html.Label("above $75,000")<br />
+                @Html.RadioButtonFor(model => model.Income, "6")@Html.Label("Prefer not to answer")<br />
                 @Html.ValidationMessageFor(model => model.Income, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -201,7 +221,12 @@
         <div class="form-group">
             @*@Html.LabelFor(model => model.Education, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
-                @Html.EditorFor(model => model.Education, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.RadioButtonFor(model => model.Education, "1")@Html.Label("Less than high school diploma")<br />
+                @Html.RadioButtonFor(model => model.Education, "2")@Html.Label("High School Dipolma")<br />
+                @Html.RadioButtonFor(model => model.Education, "3")@Html.Label("Some college but no degree")<br />
+                @Html.RadioButtonFor(model => model.Education, "4")@Html.Label("Technical Degree")<br />
+                @Html.RadioButtonFor(model => model.Education, "5")@Html.Label("Associates Degree")<br />
+                @Html.RadioButtonFor(model => model.Education, "6")@Html.Label("Bachelors Degree or above")<br />
                 @Html.ValidationMessageFor(model => model.Education, "", new { @class = "text-danger" })
             </div>
         </div>
