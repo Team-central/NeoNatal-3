@@ -58,6 +58,17 @@ namespace CentralNNApp.Models
 
         public int? Education { get; set; }
 
+        public int? SafeHome { get; set; }
+ 
+         public int? SafeNeighborhood { get; set; }
+ 
+         public int? Transportation { get; set; }
+ 
+         public int? HomeInternet { get; set; }
+
+        public int? MobileInternet { get; set; }
+
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Intervention> Interventions { get; set; }
 
