@@ -13,18 +13,13 @@ namespace CentralNNApp.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Survey()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Survey Information Goes Here";
 
             return View();
         }
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+    
         }
     }
-}
