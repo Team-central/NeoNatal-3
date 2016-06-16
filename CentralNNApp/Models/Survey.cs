@@ -62,5 +62,12 @@ namespace CentralNNApp.Models
         public virtual ICollection<Intervention> Interventions { get; set; }
 
         public virtual Mother Mother { get; set; }
+
+        [NotMapped]
+        public bool DietBoolean
+        {
+            get { return Diet != 0; }
+            set { Diet = value ? 1 : 0; }
+        }
     }
 }
