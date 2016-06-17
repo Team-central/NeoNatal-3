@@ -17,8 +17,7 @@ namespace CentralNNApp.Controllers
         // GET: Surveys
         public ActionResult Index()
         {
-            var surveys = db.Surveys.Include(s => s.Mother);
-            return View(surveys.ToList());
+            return View(db.Surveys.ToList());
         }
 
         // GET: Surveys/Details/5
@@ -33,6 +32,7 @@ namespace CentralNNApp.Controllers
             {
                 return HttpNotFound();
             }
+
             return View(survey);
         }
 
@@ -48,7 +48,7 @@ namespace CentralNNApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,CreatedAt,MotherID,Ward,Race,Premature,OBGYN,Age,StressLevel,Smoker,FamilySmoke,Alcohol,FamilyAlcohol,Drug,FamilyDrugs,ChronicIllness,Diet,GovAssit,Income,Education")] Survey survey)
+        public ActionResult Create([Bind(Include = "ID,CreatedAt,MotherID,Ward,Race,Premature,OBGYN,Age,StressLevel,Smoker,FamilySmoke,Alcohol,FamilyAlcohol,Drug,FamilyDrugs,ChronicIllness,Diet,GovAssit,Income,Education,SafeHome,SafeNeighborhood,Transportation,HomeInternet,MobileInternet")] Survey survey)
         {
             if (ModelState.IsValid)
             {
@@ -57,7 +57,6 @@ namespace CentralNNApp.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.MotherID = new SelectList(db.Mothers, "ID", "FirstName", survey.MotherID);
             return View(survey);
         }
 
@@ -73,7 +72,6 @@ namespace CentralNNApp.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.MotherID = new SelectList(db.Mothers, "ID", "FirstName", survey.MotherID);
             return View(survey);
         }
 
@@ -82,7 +80,7 @@ namespace CentralNNApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,CreatedAt,MotherID,Ward,Race,Premature,OBGYN,Age,StressLevel,Smoker,FamilySmoke,Alcohol,FamilyAlcohol,Drug,FamilyDrugs,ChronicIllness,Diet,GovAssit,Income,Education")] Survey survey)
+        public ActionResult Edit([Bind(Include = "ID,CreatedAt,MotherID,Ward,Race,Premature,OBGYN,Age,StressLevel,Smoker,FamilySmoke,Alcohol,FamilyAlcohol,Drug,FamilyDrugs,ChronicIllness,Diet,GovAssit,Income,Education,SafeHome,SafeNeighborhood,Transportation,HomeInternet,MobileInternet")] Survey survey)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +88,6 @@ namespace CentralNNApp.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.MotherID = new SelectList(db.Mothers, "ID", "FirstName", survey.MotherID);
             return View(survey);
         }
 

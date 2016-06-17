@@ -9,13 +9,6 @@ namespace CentralNNApp.Models
     [Table("Mother")]
     public partial class Mother
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Mother()
-        {
-            Surveys = new HashSet<Survey>();
-        }
-
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ID { get; set; }
 
         [Required]
@@ -38,11 +31,8 @@ namespace CentralNNApp.Models
         [StringLength(50)]
         public string Email { get; set; }
 
-        //[Required]
-        [StringLength(50)]
+        [Required]
+        [StringLength(128)]
         public string UserID { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Survey> Surveys { get; set; }
     }
 }

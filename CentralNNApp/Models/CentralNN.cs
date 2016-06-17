@@ -14,7 +14,7 @@ namespace CentralNNApp.Models
 
         public virtual DbSet<Intervention> Interventions { get; set; }
         public virtual DbSet<Mother> Mothers { get; set; }
-        public virtual DbSet<Survey> Surveys { get; set; }
+       
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -46,13 +46,6 @@ namespace CentralNNApp.Models
                 .Property(e => e.UserID)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Survey>()
-                .Property(e => e.OBGYN)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Survey>()
-                .Property(e => e.Age)
-                .IsUnicode(false);
         }
     }
 }

@@ -16,11 +16,12 @@ namespace CentralNNApp.Models
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+
         public int ID { get; set; }
 
-        public DateTime? CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
 
-        public int? MotherID { get; set; }
+        public int MotherID { get; set; }
 
         public int? Ward { get; set; }
 
@@ -31,8 +32,7 @@ namespace CentralNNApp.Models
         [StringLength(50)]
         public string OBGYN { get; set; }
 
-        [StringLength(50)]
-        public string Age { get; set; }
+        public int? Age { get; set; }
 
         public int? StressLevel { get; set; }
 
@@ -57,6 +57,16 @@ namespace CentralNNApp.Models
         public int? Income { get; set; }
 
         public int? Education { get; set; }
+
+        public int? SafeHome { get; set; }
+
+        public int? SafeNeighborhood { get; set; }
+
+        public int? Transportation { get; set; }
+
+        public int? HomeInternet { get; set; }
+
+        public int? MobileInternet { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Intervention> Interventions { get; set; }

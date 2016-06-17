@@ -12,12 +12,12 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Mother.FirstName)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.CreatedAt)
         </th>
-        @*<th>
+        <th>
+            @Html.DisplayNameFor(model => model.MotherID)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Ward)
         </th>
         <th>
@@ -68,16 +68,31 @@
         <th>
             @Html.DisplayNameFor(model => model.Education)
         </th>
-        <th></th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.SafeHome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SafeNeighborhood)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Transportation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeInternet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MobileInternet)
+        </th>
+        <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Mother.FirstName)
+            @Html.DisplayFor(modelItem => item.CreatedAt)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CreatedAt)
+            @Html.DisplayFor(modelItem => item.MotherID)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Ward)
@@ -129,6 +144,21 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Education)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SafeHome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SafeNeighborhood)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Transportation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomeInternet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MobileInternet)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
