@@ -17,7 +17,8 @@ namespace CentralNNApp.Controllers
         // GET: Surveys
         public ActionResult Index()
         {
-            return View(db.Surveys.ToList());
+            var surveys = db.Surveys.Include(s => s.Mother);
+            return View(surveys.ToList());
         }
 
         // GET: Surveys/Details/5
@@ -32,7 +33,6 @@ namespace CentralNNApp.Controllers
             {
                 return HttpNotFound();
             }
-
             return View(survey);
         }
 
@@ -57,6 +57,7 @@ namespace CentralNNApp.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.MotherID = new SelectList(db.Mothers, "ID", "FirstName", survey.MotherID);
             return View(survey);
         }
 
@@ -72,6 +73,7 @@ namespace CentralNNApp.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.MotherID = new SelectList(db.Mothers, "ID", "FirstName", survey.MotherID);
             return View(survey);
         }
 
@@ -88,6 +90,7 @@ namespace CentralNNApp.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.MotherID = new SelectList(db.Mothers, "ID", "FirstName", survey.MotherID);
             return View(survey);
         }
 
