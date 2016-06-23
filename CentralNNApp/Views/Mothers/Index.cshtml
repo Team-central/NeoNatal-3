@@ -4,17 +4,17 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Current Mothers.</h2>
 
-<p>
+<p class="create">
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
-        <th>
+        <th id="firstname">
             @Html.DisplayNameFor(model => model.FirstName)
         </th>
-        <th>
+        <th id="lastname">
             @Html.DisplayNameFor(model => model.LastName)
         </th>
         <th>
@@ -29,7 +29,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Email)
         </th>
-        <th>
+        <th id="userid">
             @Html.DisplayNameFor(model => model.UserID)
         </th>
         <th></th>
@@ -59,11 +59,13 @@
             @Html.DisplayFor(modelItem => item.UserID)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) <br />
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) <br />
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>
 }
 
 </table>
+
+<p id="confidentiality">This page contains confidential information.</p>

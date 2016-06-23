@@ -4,17 +4,17 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Current Surveys.</h2>
 
-<p>
+<p class="create">
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
-        <th>
+        <th id="created-at">
             @Html.DisplayNameFor(model => model.CreatedAt)
         </th>
-        <th>
+        <th id="mother">
             @Html.DisplayNameFor(model => model.MotherID)
         </th>
         <th>
@@ -23,43 +23,43 @@
             <th>
                 @Html.DisplayNameFor(model => model.Race)
             </th>
-            <th>
+            <th id="premature">
                 @Html.DisplayNameFor(model => model.Premature)
             </th>
-            <th>
+            <th id="obgyn">
                 @Html.DisplayNameFor(model => model.OBGYN)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Age)
             </th>
-            <th>
+            <th id="stress">
                 @Html.DisplayNameFor(model => model.StressLevel)
             </th>
-            <th>
+            <th id="smoke">
                 @Html.DisplayNameFor(model => model.Smoker)
             </th>
-            <th>
+            <th id="familysmoke">
                 @Html.DisplayNameFor(model => model.FamilySmoke)
             </th>
-            <th>
+            <th id="alcohol">
                 @Html.DisplayNameFor(model => model.Alcohol)
             </th>
-            <th>
+            <th id="familyalcohol">
                 @Html.DisplayNameFor(model => model.FamilyAlcohol)
             </th>
-            <th>
+            <th id="drugs">
                 @Html.DisplayNameFor(model => model.Drug)
             </th>
-            <th>
+            <th id="familydrugs">
                 @Html.DisplayNameFor(model => model.FamilyDrugs)
             </th>
-            <th>
+            <th id="illness">
                 @Html.DisplayNameFor(model => model.ChronicIllness)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Diet)
             </th>
-            <th>
+            <th id="govassist">
                 @Html.DisplayNameFor(model => model.GovAssit)
             </th>
             <th>
@@ -68,19 +68,19 @@
             <th>
                 @Html.DisplayNameFor(model => model.Education)
             </th>
-            <th>
+            <th id="safehome">
                 @Html.DisplayNameFor(model => model.SafeHome)
             </th>
-            <th>
+            <th id="neighborhood">
                 @Html.DisplayNameFor(model => model.SafeNeighborhood)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Transportation)
             </th>
-            <th>
+            <th id="internet">
                 @Html.DisplayNameFor(model => model.HomeInternet)
             </th>
-            <th>
+            <th id="mobile">
                 @Html.DisplayNameFor(model => model.MobileInternet)
             </th>
         <th></th>
@@ -162,11 +162,14 @@
                     @Html.DisplayFor(modelItem => item.MobileInternet)
                 </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) <br />
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) <br />
                 @Html.ActionLink("Delete", "Delete", new { id = item.ID })
             </td>
         </tr>
     }
 
+
 </table>
+
+<p id="confidentiality">This page contains confidential information.</p>

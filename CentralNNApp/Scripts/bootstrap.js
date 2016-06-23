@@ -2012,3 +2012,28 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
   })
 
 }(window.jQuery);
+// suvery index page table text
+
+$("#created-at").html("Date/Time Created");
+$("#mother").html("Mother's ID");
+$("#premature").html("Premature Births");
+$("#obgyn").html("OBGYN Visit");
+$("#stress").html("Stress Level");
+$("#smoke").html("Tobacco Use");
+$("#familysmoke").html("Family Tobacco Use");
+$("#alcohol").html("Alcohol Consumption");
+$("#familyalcohol").html("Family Alcohol Consumption");
+$("#drugs").html("Drug Use");
+$("#familydrugs").html("Family Drug Use");
+$("#illness").html("Chronic Illness");
+$("#govassist").html("Government Assistance");
+$("#safehome").html("Safe Home");
+$("#neighborhood").html("Safe Neighborhood");
+$("#internet").html("Home Internet");
+$("#mobile").html("Mobile Internet");
+
+// mothers index page table text
+
+$("#firstname").html("First Name");
+$("#lastname").html("Last Name");
+$("#userid").html("User ID");

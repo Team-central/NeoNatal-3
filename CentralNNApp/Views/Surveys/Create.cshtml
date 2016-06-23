@@ -4,7 +4,8 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Create New Survey.</h2>
+<p id="answerall">Please answer <strong><u>all</u></strong> survey questions.</p>
 
 
 @using (Html.BeginForm())
@@ -12,7 +13,7 @@
     @Html.AntiForgeryToken()
 
     <div class="form-horizontal">
-        <h4>Survey</h4>
+        
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @*<div class="form-group">
@@ -128,7 +129,7 @@
         </div>
 
         <div class="form-group">
-            <div class="control-label col-md-4"><b> Have you drank alcohol in the last month? </b></div>
+            <div class="control-label col-md-4"><b> Have you consumed alcohol in the last month? </b></div>
             @*@Html.LabelFor(model => model.Alcohol, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.Alcohol, "1")@Html.Label("Yes")<br />
@@ -186,13 +187,13 @@
             <div class="control-label col-md-4"><b> Which of these would you say you consume on a daily basis? Select all that apply. </b></div>
             @*@Html.LabelFor(model => model.Diet, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
-                @Html.CheckBoxFor(model => model.DietBoolean, "1")@Html.Label("Red Meat (for example: beef)")<br />
+                @Html.CheckBoxFor(model => model.DietBoolean, "1")@Html.Label("Red Meat (for example: steak)")<br />
                 @Html.CheckBoxFor(model => model.DietBoolean, "2")@Html.Label("White Meat (for example: chicken)")<br />
                 @Html.CheckBoxFor(model => model.DietBoolean, "3")@Html.Label("Fish")<br />
                 @Html.CheckBoxFor(model => model.DietBoolean, "4")@Html.Label("Vegetables")<br />
                 @Html.CheckBoxFor(model => model.DietBoolean, "5")@Html.Label("Fruit")<br />
                 @Html.CheckBoxFor(model => model.DietBoolean, "6")@Html.Label("Bread/Rice/Pasta")<br />
-                @Html.CheckBoxFor(model => model.DietBoolean, "7")@Html.Label("Milk, yogurt, cheese, and other dairy products")<br />
+                @Html.CheckBoxFor(model => model.DietBoolean, "7")@Html.Label("Milk/Yogurt/Cheese/Other dairy products")<br />
                 @Html.CheckBoxFor(model => model.DietBoolean, "8")@Html.Label("Sweet desserts/Salty snacks/French fries/Soda")<br />
                 @Html.ValidationMessageFor(model => model.Diet, "", new { @class = "text-danger" })
             </div>
@@ -227,7 +228,7 @@
             <div class="control-label col-md-4"><b>What is the highest level of education you have completed?</b></div>
             @*@Html.LabelFor(model => model.Education, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
-                @Html.RadioButtonFor(model => model.Education, "1")@Html.Label("Less than high school diploma")<br />
+                @Html.RadioButtonFor(model => model.Education, "1")@Html.Label("No High School Diploma")<br />
                 @Html.RadioButtonFor(model => model.Education, "2")@Html.Label("High School Dipolma/GED")<br />
                 @Html.RadioButtonFor(model => model.Education, "3")@Html.Label("Some college but no degree")<br />
                 @Html.RadioButtonFor(model => model.Education, "4")@Html.Label("Technical Degree")<br />
@@ -303,6 +304,8 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+<p id="confidentiality"><em>Privacy Statement:<br /> Personal information collected in the course of completing the NEO+Natal Risk Assessment Survey will be kept confidential.</em></p>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
