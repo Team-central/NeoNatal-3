@@ -45,6 +45,8 @@
             <div class="col-md-8">
                 @Html.EditorFor(model => model.Ward, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Ward, "", new { @class = "text-danger" })
+
+                <h6><a href="http://www.clevelandcitycouncil.org/find-my-ward" target="_blank">Find Your Ward</a></h6>
             </div>
         </div>
 
