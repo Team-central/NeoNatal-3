@@ -20,7 +20,12 @@ namespace CentralNNApp.Models
         public int? ID { get; set; }
 
         [Column(TypeName = "datetime2")]
-        public DateTime CreatedAt { get; set; }
+        private DateTime? createdAt;
+        public DateTime CreatedAt
+        {
+            get { return createdAt ?? DateTime.Now; }
+            set { createdAt = value; }
+        }
 
         public int? MotherID { get; set; }
 
