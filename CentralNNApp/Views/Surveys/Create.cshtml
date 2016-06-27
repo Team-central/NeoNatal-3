@@ -43,7 +43,30 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Ward, htmlAttributes: new { @class = "control-label col-md-4" })
             <div class="col-md-8">
-                @Html.EditorFor(model => model.Ward, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownListFor(model => model.Ward, new SelectList(
+                                new List<Object>
+                                {
+                                    new {value = 1, text = "1" },
+                                    new {value = 2, text = "2" },
+                                    new {value = 3, text = "3" },
+                                    new {value = 4, text = "4" },
+                                    new {value = 5, text = "5" },
+                                    new {value = 6, text = "6" },
+                                    new {value = 7, text = "7" },
+                                    new {value = 8, text = "8" },
+                                    new {value = 9, text = "9" },
+                                    new {value = 10, text = "10" },
+                                    new {value = 11, text = "11" },
+                                    new {value = 12, text = "12" },
+                                    new {value = 13, text = "13" },
+                                    new {value = 14, text = "14" },
+                                    new {value = 15, text = "15" },
+                                    new {value = 16, text = "16" },
+                                    new {value = 17, text = "17" }
+                                },
+                                "value",
+                                "text",
+                1))
                 @Html.ValidationMessageFor(model => model.Ward, "", new { @class = "text-danger" })
 
                 <h6><a href="http://www.clevelandcitycouncil.org/find-my-ward" target="_blank">Find Your Ward</a></h6>
