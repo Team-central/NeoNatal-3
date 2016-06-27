@@ -52,11 +52,13 @@ namespace CentralNNApp.Controllers
         {
             if (ModelState.IsValid)
             {
+               
                 db.Surveys.Add(survey);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            
+          
             ViewBag.MotherID = new SelectList(db.Mothers, "ID", "FirstName", survey.MotherID);
             return View(survey);
         }

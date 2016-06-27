@@ -176,6 +176,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MothersController.cs" />
     <Compile Include="Controllers\SurveysController.cs" />
+    <Compile Include="DateTime\Now\ToString.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

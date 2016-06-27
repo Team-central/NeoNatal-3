@@ -2037,3 +2037,14 @@ $("#mobile").html("Mobile Internet");
 $("#firstname").html("First Name");
 $("#lastname").html("Last Name");
 $("#userid").html("User ID");
+
+// mothers details page
+
+$("#firstName").html("First Name");
+$("#lastName").html("Last Name");
+$("#userID").html("User ID");
+
+// mothers delete page
+$("#FirstName").html("First Name");
+$("#LastName").html("Last Name");
+$("#UserID").html("User ID");
