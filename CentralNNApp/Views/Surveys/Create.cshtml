@@ -40,7 +40,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"> <!--Question1-->
             @Html.LabelFor(model => model.Ward, htmlAttributes: new { @class = "control-label col-md-4" })
             <div class="col-md-8">
                 @Html.DropDownListFor(model => model.Ward, new SelectList(
@@ -73,9 +73,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question2-->
             <div class="control-label col-md-4"><b> Please select your race and/or ethinic identity: </b></div>
-            @*@Html.LabelFor(model => model.Race, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.Race, "1")@Html.Label("African American/Non-Hispanic")<br />
                 @Html.RadioButtonFor(model => model.Race, "2")@Html.Label("White/Non-Hispanic")<br />
@@ -86,9 +85,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question3-->
             <div class="control-label col-md-4"><b>Were any of your other children delivered prematurely?</b></div>
-            @*@Html.LabelFor(model => model.Premature, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.Premature, "1")@Html.Label("Yes")<br />
                 @Html.RadioButtonFor(model => model.Premature, "2")@Html.Label("No")<br />
@@ -97,9 +95,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question4-->
             <div class="control-label col-md-4"><b>Did you or have you visited a healthcare professional, such as an OBGYN, for prenatal care? </b></div>
-            @*@Html.LabelFor(model => model.OBGYN, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.OBGYN, "1")@Html.Label("Yes")<br />
                 @Html.RadioButtonFor(model => model.OBGYN, "2")@Html.Label("No")<br />
@@ -107,9 +104,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question5-->
             <div class="control-label col-md-4"><b> How old are you? </b></div>
-            @*@Html.LabelFor(model => model.Age, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.Age, "1")@Html.Label("14-19")<br />
                 @Html.RadioButtonFor(model => model.Age, "2")@Html.Label("20-24")<br />
@@ -118,9 +114,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question6-->
             <div class="control-label col-md-4"><b> What is your stress level on a daily basis? </b></div>
-            @*@Html.LabelFor(model => model.StressLevel, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.StressLevel, "1")@Html.Label("Very High Stress")<br />
                 @Html.RadioButtonFor(model => model.StressLevel, "2")@Html.Label("Somewhat Stressed")<br />
@@ -131,9 +126,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question7-->
             <div class="control-label col-md-4"><b> Have you smoked a cigarette or used any other tobacco product in the last year? </b></div>
-            @*@Html.LabelFor(model => model.Smoker, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.Smoker, "1")@Html.Label("Yes")<br />
                 @Html.RadioButtonFor(model => model.Smoker, "2")@Html.Label("No")<br />
@@ -142,9 +136,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question8-->
             <div class="control-label col-md-4"><b> Does anyone in your family/household smoke cigarettes or use tobacco? </b></div>
-            @*@Html.LabelFor(model => model.FamilySmoke, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.FamilySmoke, "1")@Html.Label("Yes")<br />
                 @Html.RadioButtonFor(model => model.FamilySmoke, "2")@Html.Label("No")<br />
@@ -153,9 +146,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question9-->
             <div class="control-label col-md-4"><b> Have you consumed alcohol in the last month? </b></div>
-            @*@Html.LabelFor(model => model.Alcohol, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.Alcohol, "1")@Html.Label("Yes")<br />
                 @Html.RadioButtonFor(model => model.Alcohol, "2")@Html.Label("No")<br />
@@ -164,9 +156,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question10-->
             <div class="control-label col-md-4"><b> Does anyone in your family/household drink alcohol on a weekly basis? </b></div>
-            @*@Html.LabelFor(model => model.FamilyAlcohol, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.FamilyAlcohol, "1")@Html.Label("Yes")<br />
                 @Html.RadioButtonFor(model => model.FamilyAlcohol, "2")@Html.Label("No")<br />
@@ -175,9 +166,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question11-->
             <div class="control-label col-md-4"><b> Have you used any drugs other than alcohol or tobacco in the last year? </b></div>
-            @*@Html.LabelFor(model => model.Drug, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.Drug, "1")@Html.Label("Yes")<br />
                 @Html.RadioButtonFor(model => model.Drug, "2")@Html.Label("No")<br />
@@ -186,9 +176,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question12-->
             <div class="control-label col-md-4"><b> Has anyone in your family used drugs other than tobacco and alcohol? </b></div>
-            @*@Html.LabelFor(model => model.FamilyDrugs, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.FamilyDrugs, "1")@Html.Label("Yes")<br />
                 @Html.RadioButtonFor(model => model.FamilyDrugs, "2")@Html.Label("No")<br />
@@ -197,9 +186,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question13-->
             <div class="control-label col-md-4"><b> Do you currently have a chronic illness? </b></div>
-            @*@Html.LabelFor(model => model.ChronicIllness, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.ChronicIllness, "1")@Html.Label("Yes")<br />
                 @Html.RadioButtonFor(model => model.ChronicIllness, "2")@Html.Label("No")<br />
@@ -208,9 +196,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question14-->
             <div class="control-label col-md-4"><b> Which of these would you say you consume on a daily basis? Select all that apply. </b></div>
-            @*@Html.LabelFor(model => model.Diet, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.CheckBoxFor(model => model.DietBoolean, "1")@Html.Label("Red Meat (for example: steak)")<br />
                 @Html.CheckBoxFor(model => model.DietBoolean, "2")@Html.Label("White Meat (for example: chicken)")<br />
@@ -224,9 +211,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question15-->
             <div class="control-label col-md-4"><b>Do you currently have a chronic illness?</b></div>
-            @*@Html.LabelFor(model => model.GovAssit, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.ChronicIllness, "1")@Html.Label("Yes")<br />
                 @Html.RadioButtonFor(model => model.ChronicIllness, "2")@Html.Label("No")<br />
@@ -235,9 +221,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question16-->
             <div class="control-label col-md-4"><b>What is your yearly household income?</b></div>
-            @*@Html.LabelFor(model => model.Income, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.Income, "1")@Html.Label("Under $15,000")<br />
                 @Html.RadioButtonFor(model => model.Income, "2")@Html.Label("$15,000-$25,000")<br />
@@ -249,9 +234,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question16-->
             <div class="control-label col-md-4"><b>What is the highest level of education you have completed?</b></div>
-            @*@Html.LabelFor(model => model.Education, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.Education, "1")@Html.Label("No High School Diploma")<br />
                 @Html.RadioButtonFor(model => model.Education, "2")@Html.Label("High School Dipolma/GED")<br />
@@ -263,9 +247,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question17-->
             <div class="control-label col-md-4"><b>Do you feel safe in your home?</b></div>
-            @*@Html.LabelFor(model => model.Premature, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.SafeHome, "1")@Html.Label("Yes")<br />
                 @Html.RadioButtonFor(model => model.SafeHome, "2")@Html.Label("No")<br />
@@ -274,9 +257,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question18-->
             <div class="control-label col-md-4"><b>Do you feel safe in your neighborhood?</b></div>
-            @*@Html.LabelFor(model => model.Premature, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.SafeNeighborhood, "1")@Html.Label("Yes")<br />
                 @Html.RadioButtonFor(model => model.SafeNeighborhood, "2")@Html.Label("No")<br />
@@ -285,9 +267,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question19-->
             <div class="control-label col-md-4"><b>Do you have reliable transportation?</b></div>
-            @*@Html.LabelFor(model => model.Premature, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.Transportation, "1")@Html.Label("Yes")<br />
                 @Html.RadioButtonFor(model => model.Transportation, "2")@Html.Label("No")<br />
@@ -296,9 +277,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question20-->
             <div class="control-label col-md-4"><b>Do you have reliable internet access in your home?</b></div>
-            @*@Html.LabelFor(model => model.Premature, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.HomeInternet, "1")@Html.Label("Yes")<br />
                 @Html.RadioButtonFor(model => model.HomeInternet, "2")@Html.Label("No")<br />
@@ -307,9 +287,8 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group"><!--Question22-->
             <div class="control-label col-md-4"><b>Do you have mobile internet access?</b></div>
-            @*@Html.LabelFor(model => model.Premature, htmlAttributes: new { @class = "control-label col-md-4" })*@
             <div class="col-md-8">
                 @Html.RadioButtonFor(model => model.MobileInternet, "1")@Html.Label("Yes")<br />
                 @Html.RadioButtonFor(model => model.MobileInternet, "2")@Html.Label("No")<br />
