@@ -20,7 +20,12 @@ namespace CentralNNApp.Models
         public int? ID { get; set; }
 
         [Column(TypeName = "datetime2")]
-        public DateTime CreatedAt { get; set; }
+        private DateTime? createdAt;
+        public DateTime CreatedAt
+        {
+            get { return createdAt ?? DateTime.Now; }
+            set { createdAt = value; }
+        }
 
         public int? MotherID { get; set; }
 
@@ -67,6 +72,8 @@ namespace CentralNNApp.Models
         public int? HomeInternet { get; set; }
 
         public int? MobileInternet { get; set; }
+
+        public double? RiskScore { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Intervention> Interventions { get; set; }
