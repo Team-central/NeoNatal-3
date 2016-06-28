@@ -14,12 +14,11 @@
         <th id="created-at">
             @Html.DisplayNameFor(model => model.CreatedAt)
         </th>
-        <th id="mother">
-            @Html.DisplayNameFor(model => model.MotherID)
+        <th id="first-name">
+            @Html.DisplayNameFor(model => model.Mother.FirstName)
         </th>
-        <th>
-        <th id="score">
-            @Html.DisplayNameFor(model => model.RiskScore)
+        <th id="last-name">
+            @Html.DisplayNameFor(model => model.Mother.LastName)
         </th>
         <th></th>
     </tr>
@@ -34,7 +33,7 @@
                 @Html.DisplayFor(modelItem => item.Mother.FirstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.RiskScore)
+                @Html.DisplayFor(modelItem => item.Mother.LastName)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.ID }) <br />
